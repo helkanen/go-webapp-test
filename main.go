@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 )
@@ -15,8 +16,8 @@ func main() {
 		port = "3000"
 	}
 
+	fmt.Println("Starting webapp on port:", port)
 	mux := http.NewServeMux()
-
 	mux.HandleFunc("/", indexHandler)
 	http.ListenAndServe(":"+port, mux)
 }

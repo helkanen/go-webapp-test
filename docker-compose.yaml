@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  webapp:
+    image: go-webapp
+    container_name: go-webapp
+    build:
+      context: .
+    ports: 
+      - 3000:3000
+
+  webapp2:
+    image: go-webapp
+    container_name: go-webapp-2
+    build:
+      context: .
+    ports: 
+      - 3001:3001
+    environment: 
+      - PORT=3001

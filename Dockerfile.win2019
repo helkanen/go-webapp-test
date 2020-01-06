@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
-RUN mkdir -p C:/Go
+RUN powershell.exe -c 'mkdir -p C:/Go'
 WORKDIR C:/Go
 COPY . .
 

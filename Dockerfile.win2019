@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
+
+WORKDIR C:\Go
+COPY . .
+
+RUN echo "Running inside win2019"
+#RUN go get -d -v ./...
+#RUN go install -v ./...
+
+EXPOSE 3000/tcp
+
+CMD ["webapp"]
